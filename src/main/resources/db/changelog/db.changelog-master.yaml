@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-info-gen-dir-table.yaml
+  - include:
+      file: db/changelog/changeset/create-info-headorg-table.yaml
+  - include:
+      file: db/changelog/changeset/create-info-branchorg-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-info-gendir-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-info-headorg-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-info-branchorg-table.yaml
+#  - include:
+#      file: db/changelog/changeset/insert-info-organization-table.yaml

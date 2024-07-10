@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-branchorg-table
+      author: Строев Д.В.
+      changes:
+        - createTable:
+            tableName: info_branch_org
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name_organization
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: postal_address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: head_organization_id
+                  type: bigint
+                  constraints:
+                    nullable: true

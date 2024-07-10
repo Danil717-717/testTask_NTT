@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-organization-table
+      author: Строев Д.В.
+      changes:
+        - createTable:
+            tableName: info_organization
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: full_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: legal_address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ogrn
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: postal_address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: short_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: tin
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: gen_dir_id
+                  type: bigint
+                  constraints:
+                    nullable: false
