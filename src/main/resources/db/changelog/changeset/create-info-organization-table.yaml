@@ -27,7 +27,7 @@ databaseChangeLog:
                   name: ogrn
                   type: int
                   constraints:
-                    nullable: false
+                    nullable: true
               - column:
                   name: postal_address
                   type: varchar(255)
@@ -42,9 +42,28 @@ databaseChangeLog:
                   name: tin
                   type: int
                   constraints:
-                    nullable: false
+                    nullable: true
               - column:
                   name: gen_dir_id
                   type: bigint
                   constraints:
                     nullable: false
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 1
+            maxValue: 9223372036854775807
+            minValue: 1
+            sequenceName: hibernate_identity
+  - changeSet:
+      id: load-organization-table
+      author: Строев Д.В.
+      changes:
+        - loadData:
+            tableName: info_organization
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: db/changelog/data/organization.csv
+            quotchar: '"'
+            separator: ','

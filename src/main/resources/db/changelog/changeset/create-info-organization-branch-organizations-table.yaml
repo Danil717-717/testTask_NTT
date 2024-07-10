@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-info_organization_branch_organizations-table
+      author: Строев Д.В.
+      changes:
+        - createTable:
+            tableName: info_organization_branch_organizations
+            columns:
+              - column:
+                  name: organization_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: branch_organizations_id
+                  type: bigint
+                  constraints:
+                    nullable: false

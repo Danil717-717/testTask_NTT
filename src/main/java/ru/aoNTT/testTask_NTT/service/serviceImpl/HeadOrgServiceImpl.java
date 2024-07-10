@@ -1,7 +1,6 @@
 package ru.aoNTT.testTask_NTT.service.serviceImpl;
 
 import org.springframework.stereotype.Service;
-import ru.aoNTT.testTask_NTT.models.entity.GenDir;
 import ru.aoNTT.testTask_NTT.models.entity.HeadOrganization;
 import ru.aoNTT.testTask_NTT.repository.HeadOrgRepository;
 import ru.aoNTT.testTask_NTT.service.HeadOrgService;

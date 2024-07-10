@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.aoNTT.testTask_NTT.models.entity.BranchOrganization;
 import ru.aoNTT.testTask_NTT.models.entity.HeadOrganization;
-import ru.aoNTT.testTask_NTT.models.entity.Organization;
 import ru.aoNTT.testTask_NTT.repository.BranchOrgRepository;
-import ru.aoNTT.testTask_NTT.repository.HeadOrgRepository;
 import ru.aoNTT.testTask_NTT.service.BranchOrgService;
 import ru.aoNTT.testTask_NTT.service.HeadOrgService;
 

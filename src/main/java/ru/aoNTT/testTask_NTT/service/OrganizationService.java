@@ -84,6 +84,4 @@ public interface OrganizationService {
      * @return entity organization
      */
     Organization createOrg(Organization organization);
-
-
 }

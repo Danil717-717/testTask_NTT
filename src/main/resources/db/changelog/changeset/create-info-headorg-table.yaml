@@ -33,3 +33,35 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
+  - changeSet:
+      id: load-headorg-table
+      author: Строев Д.В.
+      changes:
+        - loadData:
+            tableName: info_head_org
+            columns:
+              - column:
+                  header: id
+                  name: id
+                  type: NUMERIC
+              - column:
+                  header: date_birth
+                  name: date_birth
+                  type: STRING
+              - column:
+                  header: first_name
+                  name: first_name
+                  type: STRING
+              - column:
+                  header: last_name
+                  name: last_name
+                  type: STRING
+              - column:
+                  header: surname
+                  name: surname
+                  type: STRING
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: db/changelog/data/headorg.csv
+            quotchar: '"'
+            separator: ','

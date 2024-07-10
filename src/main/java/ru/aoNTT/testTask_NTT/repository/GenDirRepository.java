@@ -3,7 +3,6 @@ package ru.aoNTT.testTask_NTT.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import ru.aoNTT.testTask_NTT.models.entity.GenDir;
-import ru.aoNTT.testTask_NTT.models.entity.Organization;
 
 import java.util.List;
 
@@ -19,6 +18,6 @@ public interface GenDirRepository extends JpaRepository<GenDir, Long> {
             "o.lastName LIKE CONCAT('%',:query, '%')" +
             "OR o.firstName LIKE CONCAT('%', :query, '%')" +
             "OR o.surname LIKE CONCAT('%', :query, '%')" +
-            "OR o.dateBirth LIKE CONCAT('%', :query, '%')" )
+            "OR o.dateBirth LIKE CONCAT('%', :query, '%')")
     List<GenDir> searchGenDir(String query);
 }

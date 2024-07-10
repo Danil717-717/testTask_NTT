@@ -28,3 +28,14 @@ databaseChangeLog:
                   type: bigint
                   constraints:
                     nullable: true
+  - changeSet:
+      id: load-branchorg-table
+      author: Строев Д.В.
+      changes:
+        - loadData:
+            tableName: info_branch_org
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: db/changelog/data/branchorg.csv
+            quotchar: '"'
+            separator: ','

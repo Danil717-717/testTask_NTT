@@ -50,7 +50,7 @@ public class RestControllerOrganization {
      * @return all organizations by key
      */
     @GetMapping("/organization/search")
-    public List<Organization> searchOrganization(@RequestParam("query") String query){
+    public List<Organization> searchOrganization(@RequestParam("query") String query) {
         return organizationService.searchOrg(query);
     }
 
@@ -89,13 +89,13 @@ public class RestControllerOrganization {
     /**
      * Method adds a CEO to the organization
      *
-     * @param id organization id
+     * @param id        organization id
      * @param headorgId id of the CEO
      * @return organization
      */
     @PostMapping("/organization/{id}/gendir/{gendirId}")
-    public Organization addGenDir(@PathVariable Long id, @PathVariable Long headorgId){
-        return organizationService.assignGenDir(id,headorgId);
+    public Organization addGenDir(@PathVariable Long id, @PathVariable Long headorgId) {
+        return organizationService.assignGenDir(id, headorgId);
     }
 
     /**
@@ -115,7 +115,7 @@ public class RestControllerOrganization {
      * @return list of organization branches
      */
     @GetMapping("/branchorg/search")
-    public List<BranchOrganization> searchBranchOrg(@RequestParam("query") String query){
+    public List<BranchOrganization> searchBranchOrg(@RequestParam("query") String query) {
         return branchOrgService.searchBranchOrg(query);
     }
 
@@ -154,13 +154,13 @@ public class RestControllerOrganization {
     /**
      * The method adds a manager to a branch of the organization
      *
-     * @param id of the organization's branch
+     * @param id        of the organization's branch
      * @param idheadorg of the head
      * @return branch of the organization
      */
     @PostMapping("/branchorg/{id}/headorg/{idheadorg}")
-    public BranchOrganization addHeadOrg(@PathVariable Long id, @PathVariable Long idheadorg){
-        return branchOrgService.assignHeadOrganization(id,idheadorg);
+    public BranchOrganization addHeadOrg(@PathVariable Long id, @PathVariable Long idheadorg) {
+        return branchOrgService.assignHeadOrganization(id, idheadorg);
     }
 
     /**
@@ -180,7 +180,7 @@ public class RestControllerOrganization {
      * @return list of CEOs
      */
     @GetMapping("/gendir/search")
-    public List<GenDir> searchGenDir(@RequestParam("query") String query){
+    public List<GenDir> searchGenDir(@RequestParam("query") String query) {
         return genDirService.searchGenDir(query);
     }
 
@@ -228,11 +228,12 @@ public class RestControllerOrganization {
 
     /**
      * The method displays a list of heads of the organization by key
+     *
      * @param query key
      * @return list of heads of the organization
      */
     @GetMapping("/headorg/search")
-    public List<HeadOrganization> searchHeadOrganization(@RequestParam("query") String query){
+    public List<HeadOrganization> searchHeadOrganization(@RequestParam("query") String query) {
         return headOrgService.searchHeadOrganization(query);
     }
 

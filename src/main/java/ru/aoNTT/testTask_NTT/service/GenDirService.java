@@ -1,6 +1,5 @@
 package ru.aoNTT.testTask_NTT.service;
 
-import ru.aoNTT.testTask_NTT.models.entity.BranchOrganization;
 import ru.aoNTT.testTask_NTT.models.entity.GenDir;
 
 import java.util.List;

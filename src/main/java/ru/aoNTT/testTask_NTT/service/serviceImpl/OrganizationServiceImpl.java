@@ -1,8 +1,6 @@
 package ru.aoNTT.testTask_NTT.service.serviceImpl;
 
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.aoNTT.testTask_NTT.models.entity.BranchOrganization;
 import ru.aoNTT.testTask_NTT.models.entity.GenDir;
@@ -75,16 +73,16 @@ public class OrganizationServiceImpl implements OrganizationService {
     }
 
     @Override
-    public Organization assignGenDir(Long id, Long genDirID){
-            Organization organization = findById(id);
-            GenDir genDirNew = genDirService.findById(genDirID);
-            organization.setGenDir(genDirNew);
-            organizationRepository.save(organization);
-            return organization;
+    public Organization assignGenDir(Long id, Long genDirID) {
+        Organization organization = findById(id);
+        GenDir genDirNew = genDirService.findById(genDirID);
+        organization.setGenDir(genDirNew);
+        organizationRepository.save(organization);
+        return organization;
     }
 
     @Override
-    public void addBranchOrganizations(Long id, BranchOrganization branchOrganization){
+    public void addBranchOrganizations(Long id, BranchOrganization branchOrganization) {
         Organization organization = findById(id);
         ArrayList<BranchOrganization> branchOrganizations = new ArrayList<>();
         branchOrganizations.add(branchOrganization);
@@ -96,6 +94,4 @@ public class OrganizationServiceImpl implements OrganizationService {
     public Organization createOrg(Organization organization) {
         return organizationRepository.save(organization);
     }
-
-
 }
